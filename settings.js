@@ -37,19 +37,19 @@ global.libreria = 'Baileys'
 global.baileys = 'V 6.7.5'
 global.vs = '2.0.7'
 global.vsJB = '5.0'
-global.nameqr = 'Yaemori Bot - MD'
-global.namebot = 'ᥡᥲᥱm᥆rі ᑲ᥆𝗍 ᰔᩚ'
+global.nameqr = 'Nexus Bot - MD'
+global.namebot = 'nexus ᑲ᥆𝗍 ᰔᩚ'
 global.sessions = 'MiniSession'
 global.jadi = 'MiniJadiBot'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.packname = '⪛✰ 𝐀𝐢 𝐘𝐚𝐞𝐦𝐨𝐫𝐢 - 𝐌𝐃 ✰⪜'
-global.botname = 'Yaemori Bot - MD 🍟'
-global.wm = 'YaemoriBot-MD 🌸'
-global.author = 'Made By DevDiego 👑'
-global.dev = '© ⍴᥆ᥕᥱrᥱძ ᑲᥡ ძᥱ᥎ძіᥱg᥆ ⚡︎'
-global.textbot = 'Ai Yaemori : DevDiego 🚩'
+global.packname = '⪛✰ nexus - 𝐌𝐃 ✰⪜'
+global.botname = 'nexus Bot - MD 🍟'
+global.wm = 'nexus-MD 🌸'
+global.author = 'Made By Eder 👑'
+global.dev = '© ⍴᥆ᥕᥱrᥱძ ᑲᥡ Eder ⚡︎'
+global.textbot = 'Ai Yaemori : Eder 🚩'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
