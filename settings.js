@@ -49,7 +49,7 @@ global.botname = 'nexus Bot - MD 🍟'
 global.wm = 'nexus-MD 🌸'
 global.author = 'Made By Eder 👑'
 global.dev = '© ⍴᥆ᥕᥱrᥱძ ᑲᥡ Eder ⚡︎'
-global.textbot = 'Ai Yaemori : Eder 🚩'
+global.textbot = 'Nexus : Eder 🚩'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
