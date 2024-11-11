@@ -43,7 +43,7 @@ global.asistencia = 'https://wa.me/message/O4QPPHZOFDOJI1'
 global.namechannel = '© All Rightd Reserved • YaemoriBot'
 
 //ids channel
-global.channelid = '120363218713824827@newsletter'
+global.channelid = '120363181579355112@newsletter'
 global.canalIdYL = ["120363329643720731@newsletter", "120363181579355112@newsletter", "120363218713824827@newsletter", "120363181579355112@newsletter", "120363181579355112@newsletter"]
 global.canalNombreYL = ["F-KING-PROYECT 💫", "Apkmod - Test 🚩", "© All Rightd Reserved • apkmod", "Free streaming - Chanel💥", "Sky Ultra Plus ☁️"]
 global.channelRD = await getRandomChannel()
