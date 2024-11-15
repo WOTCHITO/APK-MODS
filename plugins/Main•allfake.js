@@ -45,7 +45,7 @@ global.namechannel = '© All Rightd Reserved • YaemoriBot'
 //ids channel
 global.channelid = '120363181579355112@newsletter'
 global.canalIdYL = ["120363329643720731@newsletter", "120363181579355112@newsletter", "120363218713824827@newsletter", "120363181579355112@newsletter", "120363181579355112@newsletter"]
-global.canalNombreYL = ["F-KING-PROYECT 💫", "Apkmod - Test 🚩", "Aplicaciones mods", "Free streaming - Chanel💥", "CUENTAS GRATIS ☁️"]
+global.canalNombreYL = ["F-KING-PROYECT 💫", "Apkmod - Test 🚩", "APLICACIONES MODS GRATIS", "Free streaming - Chanel💥", "CUENTAS GRATIS ☁️"]
 global.channelRD = await getRandomChannel()
 
 //fechas
