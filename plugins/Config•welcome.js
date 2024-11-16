@@ -1,11 +1,40 @@
-let WAMessageStubType = (await import('@whiskeysockets/baileys')).default;
+import {WAMessageStubType} from '@whiskeysockets/baileys'
+import fetch from 'node-fetch'
+
+export async function before(m, {conn, participants, groupMetadata}) {
+  if (!m.messageStubType || !m.isGroup) return !0;
+    let pp = await conn.profilePictureUrl(m.messageStubParameters[0], 'image').catch(_ => welcome)
+    let pp2 = await conn.profilePictureUrl(m.messageStubParameters[0], 'image').catch(_ => adios)
+  let img = await (await fetch(`${pp}`)).buffer()
+  let img2 = await (await fetch(`${pp2}`)).buffer()
+
+  let chat = global.db.data.chats[m.chat]
+
+ if (chat.welcome && m.messageStubType == 27) {
+    let welcome = ` 🌸≺ AKARI BOT - MD \n「 Bιҽɳʋҽɳιԃσ 」\n「 @${m.messageStubParameters[0].split`@`[0]} 」\n「 Bιҽɳʋҽɳιԃσ/α 」\n「 ${groupMetadata.subject} 」\n\n  ιαɳαʅҽʝαɳԃɾσσƙ15x`
+await conn.sendMini(m.chat, packname, textbot, welcome, img, img, redes, fkontak)
+  }
+
+  if (chat.welcome && m.messageStubType == 28) {
+    let bye = ` 🌸≺ NEXUS BOT - MD \n「 Aԃισʂ 」\n「 @${m.messageStubParameters[0].split`@`[0]} 」\n「 Sҽ ϝυҽ 」\n「 Nυɳƈα ƚҽ ϙυιʂιɱσʂ αϙυι 」\n\n  ιαɳαʅҽʝαɳԃɾσσƙ15x`
+await conn.sendMini(m.chat, packname, textbot, bye, img, img, redes, fkontak)
+  }
+
+  if (chat.welcome && m.messageStubType == 32) {
+    let kick = ` 🌸≺ NEXUS BOT - MD \n「 Aԃισʂ 」\n「 @${m.messageStubParameters[0].split`@`[0]} 」\n「 Sҽ ϝυҽ 」\n「 Nυɳƈα ƚҽ ϙυιʂιɱσʂ αϙυι 」\n\n  ιαɳαʅҽʝαɳԃɾσσƙ15x`
+await conn.sendMini(m.chat, packname, textbot, kick, img, img, redes, fkontak)
+}}
+
+/*import { WAMessageStubType } from '@whiskeysockets/baileys';
 import fetch from 'node-fetch';
 
 export async function before(m, { conn, participants, groupMetadata }) {
   if (!m.messageStubType || !m.isGroup) return true;
 
-  let vn = 'https://qu.ax/cGluV.mp3';
+  let vn = 'https://qu.ax/cUYg.mp3';
   let vn2 = 'https://qu.ax/cTDa.mp3';
+  let welc = welcome;
+  let adi = adios;
   let chat = global.db.data.chats[m.chat];
   const getMentionedJid = () => {
     return m.messageStubParameters.map(param => `${param}@s.whatsapp.net`);
@@ -16,35 +45,43 @@ export async function before(m, { conn, participants, groupMetadata }) {
 
   let userName = user ? user.name : await conn.getName(who);
 
- if (chat.welcome && m.messageStubType === 27) {
-    this.sendMessage(m.chat, { audio: { url: vn }, 
-    contextInfo: { forwardedNewsletterMessageInfo: { 
-    newsletterJid: channelRD.id, 
-    serverMessageId: '', 
-    newsletterName: channelRD.name }, forwardingScore: 9999999, isForwarded: true, mentionedJid: getMentionedJid(), "externalAdReply": { 
-    "title": `  ͟͞ Ｗ Ｅ Ｌ Ｃ Ｏ Ｍ Ｅ ͟͞  `, 
-    "body": `${userName}`, 
-    "previewType": "PHOTO", 
-    "thumbnailUrl": null,
-    "thumbnail": icons, 
-    "sourceUrl": redes, 
-    "showAdAttribution": true}}, 
-     seconds: '4556', ptt: true, mimetype: 'audio/mpeg', fileName: `error.mp3` }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
-}
+  if (chat.welcome && m.messageStubType === 27) {
+    this.sendMessage(m.chat, {
+      audio: { url: vn },
+      contextInfo: {
+        mentionedJid: getMentionedJid(),
+        "externalAdReply": {
+          "thumbnail": welc,
+          "title": "ೃ⁀➷ Ｗ Ｅ Ｌ Ｃ Ｏ Ｍ Ｅ .ೃ࿐",
+          "body": `${userName}!`,
+          "previewType": "PHOTO",
+          "thumbnailUrl": null,
+          "showAdAttribution": true,
+          sourceUrl: [yt, md, channel].sort(() => 0.5 - Math.random())[0]
+        }
+      },
+      ptt: true,
+      mimetype: 'audio/mpeg',
+      fileName: 'welcome.mp3'
+    }, { quoted: fkontak });
+  }
 
   if (chat.welcome && (m.messageStubType === 28 || m.messageStubType === 32)) {
-    this.sendMessage(m.chat, { audio: { url: vn2 }, 
-    contextInfo: { forwardedNewsletterMessageInfo: { 
-    newsletterJid: channelRD.id, 
-    serverMessageId: '', 
-    newsletterName: channelRD.name }, forwardingScore: 9999999, isForwarded: true, mentionedJid: getMentionedJid(), "externalAdReply": { 
-    "title": `  ͟͞ Ａ Ｄ Ｉ Ｏ Ｓ ͟͞  `, 
-    "body": `${userName}, se despide.`, 
-    "previewType": "PHOTO", 
-    "thumbnailUrl": null,
-    "thumbnail": icons, 
-    "sourceUrl": redes, 
-    "showAdAttribution": true}}, 
-     seconds: '4556', ptt: true, mimetype: 'audio/mpeg', fileName: `error.mp3` }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+    this.sendMessage(m.chat, {
+      audio: { url: vn2 },
+      contextInfo: {
+        mentionedJid: getMentionedJid(),
+        "externalAdReply": {
+          "showAdAttribution": true,
+          "containsAutoReply": true,
+          "title": 'ೃ⁀➷ Aԃισʂ .ೃ࿐',
+          body: `${userName}, se despide.`,
+          "previewType": "PHOTO",
+          "thumbnailUrl": '',
+          "thumbnail": adi,
+          "sourceUrl": redes
+        }
+      }
+    }, { quoted: fkontak });
   }
-}
+}*/
